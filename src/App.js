@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import UserTable from './tables/UserTable';
 import AddUserForm from './forms/AddUserForm';
 import EditUserForm from './forms/EditUserForm';
+// import axios from 'axios';
 
 const App = () => {
   const usersData = [
@@ -19,7 +20,7 @@ const App = () => {
       name: 'tom tom',
       address: '70 lexinton ave',
       phone: '222-222-2222',
-      comments: 'tom is the lowest paying customers'
+      comments: 'tom is a great customer'
     }
   ];
 
@@ -117,9 +118,14 @@ const App = () => {
             </React.Fragment>
           ) : (
             <React.Fragment>
-              <h2>
-                Add Customer <i className="fas fa-user-plus" />
-              </h2>
+              {/* <h2>
+                Add Customer{' '}
+                <i
+                  className="fas fa-user-plus"
+                  onClick={showForm}
+                  style={{ cursor: 'pointer' }}
+                />
+              </h2> */}
               <AddUserForm addUser={addUser} />
             </React.Fragment>
           )}
